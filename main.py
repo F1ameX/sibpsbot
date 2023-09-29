@@ -156,41 +156,7 @@ async def prof_payments_script1_message(message: types.Message):
                          "Пример, при окладе 20 000 рублей взнос 140 рублей.")
 
 
-@dp.message_handler(text='КОНТАКТЫ')
-async def contacts_script1_message(message: types.Message):
-    await bot.send_photo(message.chat.id, "img_url")
-    await message.answer("Новости и полезная информация публикуются в Сообществе ПРОФСОЮЗ Сибирского банка в "
-                         "<u><b><a href='foreign_url'>"
-                         "Друге</a></b></u>. Подписывайтесь и будьте в курсе активностей.\n\n"
-                         "Для оперативных коммуникаций с Профсоюзом воспользуйтесь сервисом "
-                         "<u><b>"
-                         "<a href="
-                         "'foreign_url'"
-                         ">«Профсоюз»</a></b></u> в Друге:\n\n«Задать вопрос»;\n«Со мной поступили несправедливо»;\n"
-                         "«Предложить идею»;\n«Оценить работу профсоюза»;\n«Консультация юриста».\n\n"
-                         "Вы можете обратиться лично к председателям Первичных организаций на территориях\n\n"
-                         "Председатель Профсоюза аппарата СИБ/ Новосибирского ГОСБ/ ПЦП г. "
-                         "Новосибирск – Фарафонов Сергей Владимирович\n"
-                         "Председатель Профсоюза Красноярск / Абакан – Лихторович Наталья Николаевна\n"
-                         "Председатель Профсоюза Алтай - Кустов Владимир Владимирович\n"
-                         "Председатель Профсоюза Кемерово - Шведов Виктор Геннадьевич\n"
-                         "Председатель Профсоюза Томск - Алейникова Любовь Викторовна")
-
-
-@dp.message_handler(text='МАТ ПОМОЩЬ')
-async def material_aid_script1_message(message: types.Message):
-    await bot.send_photo(message.chat.id, 'img_url')
-    await message.answer("Мат помощь", reply_markup=aid_script1_keyboard)
-
-
-@dp.message_handler(text='НAЗАД')  # в основное меню
-async def script1_main_back_message(message: types.Message):
-    await region_script1_message(message)
-
-
-@dp.message_handler(text='HАЗАД')  # подраздел -> МАТ ПОМОЩЬ
-async def material_aid_script1_sub_back_message(message: types.Message):
-    await material_aid_script1_message(message)
+# . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
 @dp.message_handler(text='ЛЕЧЕНИЕ')
@@ -362,28 +328,7 @@ async def children_script1_btn4_message(message: types.Message):
                          "председателя своей первичной организации Профсоюза.")
 
 
-@dp.message_handler(text='УСЛУГИ')
-async def services_script1_message(message: types.Message):
-    await bot.send_photo(message.chat.id, "img_url")
-    await message.answer("•	Юридические консультации\n•	Мы команда\n•	Скидки\n", reply_markup=services_script1_keyboard)
-
-
-@dp.message_handler(text="ЮРИДИЧЕСКИЕ КОНСУЛЬТАЦИИ")
-async def services_script1_btn1_message(message: types.Message):
-    await message.answer("Каждый член Профсоюза может получить качественную юридическую "
-                         "консультацию по личным вопросам или взаимоотношениям с ПАО Сбербанк "
-                         "(трудовых, кредитных, иных). Для получения бесплатной консультации "
-                         "необходимо создать обращение в Друге: сервис <u><b><a href="
-                         "'foreign_url'>"
-                         "«Профсоюз»</a></b></u>, шаблон «Консультация юриста».")
-
-
-@dp.message_handler(text='МЫ КОМАНДА')
-async def services_script1_btn2_message(message: types.Message):
-    await message.answer("Для подразделений Профсоюз частично финансирует экскурсии, командообразующие "
-                         "мероприятия и прочие активности для коллектива. Необходимо заблаговременно согласовать в "
-                         "Профсоюзом финансирование по ходатайству Руководителя СПП, списку участников и другим "
-                         "подтверждающим документам по запросу профкома Профсоюза.")
+# . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
 @dp.message_handler(text='СКИДКИ')
